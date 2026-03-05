@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirect Page</title>
-  <script>
-    window.onload = function() {
-      window.location.href = "/static/"; // Replace with your desired URL
-    };
-  </script>
+    <meta charset="utf-8">
+    <title>Google</title> <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico"> <style>
+        body { margin: 0; background: #202124; color: white; font-family: arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .search-box { background: #303134; border: 1px solid #5f6368; border-radius: 24px; width: 600px; padding: 10px 20px; display: flex; align-items: center; }
+        input { background: transparent; border: none; color: white; flex: 1; font-size: 16px; outline: none; }
+        h1 { font-size: 90px; margin-bottom: 20px; }
+    </style>
 </head>
 <body>
-  <h1>Redirecting...</h1>
-  <p>If you are not redirected, <a href="/static/">click here</a>.</p>
+    <h1>
+        <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span>
+    </h1>
+    <div class="search-box">
+        <input type="text" id="uv-address" placeholder="在此搜索或输入网址..." onkeydown="if(event.keyCode==13) window.location.href='/service/' + btoa(this.value)">
+    </div>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
 </body>
 </html>
